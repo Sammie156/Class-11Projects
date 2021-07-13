@@ -30,4 +30,5 @@ class Program1 {
     char[] grade = new char[n]; // A Single-Dimensional Array to hold the grade of the students.
     double[] total = new double[n]; // A Single-Dimensional Array to hold the total of the students.
   
+  }
 }
