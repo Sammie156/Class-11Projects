@@ -3,11 +3,11 @@ Roll  Name 	Marks-1    Marks-2     Marks-3     Marks-4     Marks-5    Total   Av
 
 The program should work for n number of students and marks to be stored using 2D array concept. Grade are as follows :
 Marks 					Grade 
->=90					  A
+>=90					      A
 >=80 & <90				  B
 >=70 & <80				  C
 >=60 & <70 				  D
-<60						  E
+<60						      E
 */
 import java.io.*;
 
