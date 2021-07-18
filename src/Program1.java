@@ -1,3 +1,4 @@
+
 /*Write a program in JAVA to enter roll, name and marks of 5 subjects. Calculate total, average and grade. Display the output in the following format.
 Roll  Name 	Marks-1    Marks-2     Marks-3     Marks-4     Marks-5    Total   Average   Grade  TOTAL  AVG 
 
@@ -29,6 +30,39 @@ class Program1 {
     String[] names = new String[n]; // Creating a Single-Dimension Array to hold the names of the students.
     char[] grade = new char[n]; // A Single-Dimensional Array to hold the grade of the students.
     double[] total = new double[n]; // A Single-Dimensional Array to hold the total of the students.
-  
+    double[] average = new double[n]; // A Single Dimensional Array to hold the average of each student
+
+    // Accepting the name of each student and storing them in the names[] array.
+    for (int i = 0; i < rows; i++) {
+      System.out.println("Enter name of student : " + (i + 1) + " : ");
+      names[i] = br.readLine();
+    }
+
+    // Accepting marks of each student for each subject and storing them in the
+    // marks[][] array.
+    for (int i = 0; i < rows; i++) {
+      for (int j = 0; j < columns; j++) {
+        System.out.println("Enter Marks of Subject : " + (j + 1) + " of " + names[i] + " : ");
+        marks[i][j] = Integer.parseInt(br.readLine());
+        total[i] += marks[i][j];
+      }
+    }
+    for (int i = 0; i < rows; i++) {
+      average[i] = total[i] / 5.0; // Calculating the average of each student.
+
+      // Assigning grade for each student based on their on average score.
+      if (average[i] >= 90.0) {
+        grade[i] = 'A';
+      } else if (average[i] >= 80 && average[i] < 90) {
+        grade[i] = 'B';
+      } else if (average[i] >= 70 && average[i] < 80) {
+        grade[i] = 'C';
+      } else if (average[i] >= 60 && average[i] < 70) {
+        grade[i] = 'D';
+      } else {
+        grade[i] = 'E';
+      }
+    }
+
   }
 }
