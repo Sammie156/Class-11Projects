@@ -64,5 +64,14 @@ class Program1 {
       }
     }
 
+    System.out.println("Roll No. Name Marks-1 Marks-2 Marks-3 Marks-4  Marks-5  Total  Average  Grade");
+
+    for (int i = 0; i < rows; i++) {
+      System.out.print((i + 1) + "\t " + names[i] + "\t ");
+      for (int j = 0; j < columns; j++) {
+        System.out.print(marks[i][j] + "\t ");
+      }
+      System.out.println(total[i] + "\t " + average[i] + "\t " + grade[i]);
+    }
   }
 }
