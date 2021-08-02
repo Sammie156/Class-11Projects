@@ -19,15 +19,19 @@ class Program5{
                           System.out.print("Enter element for row " + (i + 1) +" Column " + (j + 1) + " : ");
                           dda[i][j] = sc.nextInt(); 
                     }
-              }
+                }
 
               for (int i = 0; i < n; i++) {
-                for (int j = 0; j < n; j++) {
-                  System.out.print(dda[i][j] + "   ");
+               for (int j = 0; j < n; j++) {
+                  if ((i == j) || (i+j+1) == n )
+                    System.out.print(dda[i][j]);//print content if diagonal
+                  else 
+                    System.out.print("  ");//else print only tab space
                 }
                 System.out.println();
-              }
-            }
-            sc.close();
-      }
+              } 
+
+              sc.close();
+    }
+  }
 }
